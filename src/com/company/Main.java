@@ -10,7 +10,7 @@ public class Main {
                 return 0;
             }
         }
-        int c = (len == 0 ? 1 : 0);
+        int c = (len == 0 ? 1 : 0);//тернарный оператор
         int res = 0;
         // Шаг рекурсии / рекурсивное условие
         for (int i = c; i < 10; i++) {
@@ -19,8 +19,8 @@ public class Main {
         return res;
     }
     public static void main(String[] args) {
-        System.out.println(num1(0, 0, 3, 15)); // вызов рекурсивной функции
-        System.out.println(num2(5, 8));
+        System.out.println(num1(0, 0, 2, 3)); // вызов рекурсивной функции
+        System.out.println(num2(2, 3));
         System.out.println(num3(153));
     }
     public static int num2(int a, int b) {
@@ -41,7 +41,8 @@ public class Main {
             return Integer.toString(n);
         } // Шаг рекурсии / рекурсивное условие
         else {
-            return num3(n / 10) + " " + n % 10;
+
+            return n % 10 + " " + num3(n / 10);
         }
     }
 }
